@@ -1,0 +1,32 @@
+body
+	background-color #a8e8fa
+//para aprovechar todo el ancho que tenga disponible y q tenga proporciones de 16:9 
+#wrappert
+	max-width 1000px
+	//para que se centre
+	margin auto
+//---------------------------------
+.contenedor
+	height 0
+	overflow hidden
+	padding-bottom 56.25%//esto da la proporcion de un video 16:9
+	padding-top 30px
+	position relative
+	iframe
+		height 100% 
+		left 0	
+		position absolute 
+		top 0
+		//para que se ponga al maximo de ancho
+		width 100%
+//--------------------------------- esta es la sintaxis para hacer el video desponsive		
+.columna1,.columna2
+	//para que se conviertan a 2 columnas
+	width 50%
+	float left
+
+//esto hace que cuando el tamano del navegador sea menor a 1000px
+//lascolumnas de ser 2 se hagan 1
+@media screen and (max-width:1000px)
+	.columna1,.columna2
+		width auto
